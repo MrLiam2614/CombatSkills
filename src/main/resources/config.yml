@@ -1,0 +1,8 @@
+Mana:
+  enabled: true
+  maxPerDay: 3000
+  gainedBy:
+    killing:
+      PLAYER: 20
+      CREEPER: 10
+      ZOMBIE: 2

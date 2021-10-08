@@ -1,0 +1,5 @@
+classes:
+  healer:
+    name: "&6Healer"
+    description:
+      - "&6Heal your guild memebers"

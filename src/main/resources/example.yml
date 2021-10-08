@@ -1,0 +1,25 @@
+# Config for your Skills
+# activation List:
+#
+# Sneaking, SwordOnHand, SwordOnSecondHand, Chat[textToSendOnChat]
+#
+#
+SwordSkill:
+  dualBlades:
+    name: "Dual Blades"
+    manaCost: 20
+    activation:
+      - Sneaking
+      - OnHand[GENERIC_SWORD]
+      - OnSecondHand[DIAMOND_SWORD]
+Spels:
+  Heal:
+    name: "Heal"
+    manaCost: 30
+    activation:
+      - Chat[System Call Generate Luminous Helement Heal]
+  TrasferLife:
+    name: "Transfer Health"
+    manaCost: 17
+    activation:
+      - Chat[System Call Transfer Human Durability Self to Left]

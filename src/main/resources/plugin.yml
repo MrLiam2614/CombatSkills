@@ -1,0 +1,6 @@
+name: Combat Skillks
+main: me.mrliam2614.combatskills CombatSkills
+version: 1.0.0
+author: mrliam2614
+depend:
+  - FacilitisAPI
