@@ -4,10 +4,10 @@ import me.mrliam2614.combatskills.CombatSkills;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-public class verifications {
+public class Verifications {
     private final CombatSkills plugin;
 
-    public verifications(CombatSkills plugin){
+    public Verifications(CombatSkills plugin){
         this.plugin = plugin;
     }
 

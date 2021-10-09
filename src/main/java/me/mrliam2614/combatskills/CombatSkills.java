@@ -2,6 +2,11 @@ package me.mrliam2614.combatskills;
 
 import me.mrliam2614.FacilitisAPI.FacilitisAPI;
 import me.mrliam2614.FacilitisAPI.config.FConfig;
+import me.mrliam2614.combatskills.items.GenericList;
+import me.mrliam2614.combatskills.skillActivation.ActivationVerify;
+import me.mrliam2614.combatskills.users.ActivateSkill;
+import me.mrliam2614.combatskills.users.GetClass;
+import me.mrliam2614.combatskills.users.Verifications;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -14,6 +19,12 @@ public class CombatSkills extends JavaPlugin {
     public FConfig classes;
     public HashMap<String, FConfig> classList;
 
+    public GetClass getClass;
+    public ActivateSkill activateSkill;
+    public Verifications verifications;
+    public ActivationVerify activationVerify;
+    public GenericList genericList;
+
     public void onEnable() {
         facilitisAPI = FacilitisAPI.getInstance();
         facilitisAPI.messages.EnableMessage(this);
@@ -25,6 +36,13 @@ public class CombatSkills extends JavaPlugin {
         users = new FConfig(this, "users.yml");
         classes = new FConfig(this, "classes.yml");
         generateClassesFiles();
+
+        //Load Classes
+        getClass = new GetClass(this);
+        activateSkill = new ActivateSkill(this);
+        verifications = new Verifications(this);
+        activationVerify = new ActivationVerify(this);
+        genericList = new GenericList(this);
     }
 
     public void onDisable() {

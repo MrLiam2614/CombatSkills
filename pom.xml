@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>me.mrliam2614</groupId>
+    <groupId>me.mrliam2614.combatskills</groupId>
     <artifactId>CombatSkills</artifactId>
     <version>1.0-SNAPSHOT</version>
 
@@ -14,8 +14,13 @@
     </properties>
 
 
+
     <repositories>
         <!-- This adds the Spigot Maven repository to the build -->
+        <repository>
+            <id>spigot-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        </repository>
         <repository>
             <id>nexus</id>
             <url>http://185.25.204.204:8081/repository/maven-group/</url>
@@ -31,12 +36,13 @@
     <dependencies>
         <dependency>
             <groupId>org.spigotmc</groupId>
-            <artifactId>spigot</artifactId>
+            <artifactId>spigot-api</artifactId>
             <version>1.16.5-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>me.mrliam2614.FacilitsAPI</groupId>
-            <artifactId>FacilitsAPI</artifactId>
+            <groupId>me.mrliam2614.FacilitisAPI</groupId>
+            <artifactId>FacilitisAPI</artifactId>
             <version>1.0.3</version>
         </dependency>
     </dependencies>

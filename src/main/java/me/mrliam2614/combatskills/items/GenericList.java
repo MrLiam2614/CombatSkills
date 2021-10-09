@@ -6,10 +6,10 @@ import org.bukkit.Material;
 import java.util.ArrayList;
 import java.util.List;
 
-public class genericList {
+public class GenericList {
     private final CombatSkills plugin;
 
-    public genericList(CombatSkills plugin){
+    public GenericList(CombatSkills plugin){
         this.plugin = plugin;
     }
 
