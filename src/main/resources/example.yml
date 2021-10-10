@@ -7,31 +7,45 @@
 # @p means the nearest player, ignoring self
 #
 # Heal[4][@p], Regeneration[4][@p], Damage[+10][self], Damage[-10][@a[distance..=10]]...
-# TransferH[@p], Hurt[5][self]
-SwordSkill:
-  dualBlades:
-    name: "Dual Blades"
-    manaCost: 20
-    activation:
-      - Sneaking
-      - OnHand[GENERIC_SWORD]
-      - OnSecondHand[DIAMOND_SWORD]
-    power:
-      - Damage[+10][self]
-      - Hurt[2][self]
-Spels:
-  Heal:
-    name: "Heal"
-    manaCost: 30
-    activation:
-      - Chat[System Call Generate Luminous Helement Heal]
-    power:
-      - Heal[4][@a[distance..=10]]
-  TrasferLife:
-    name: "Transfer Health"
-    manaCost: 17
-    activation:
-      - Chat[System Call Transfer Human Durability Self to Left]
-    power:
-      - Heal[4][@p]
-      - Hurt[4]
+# TransferH[@p][self], Hurt[5][self]
+#
+#
+# Particle Shapes:
+# Sphere, Tornado, Cylinder, circle, triangle, toTarget
+dualBlads:
+  name: "Dual Blades"
+  manaCost: 20
+  activation:
+    - Sneaking
+    - OnHand[GENERIC_SWORD]
+    - OnSecondHand[DIAMOND_SWORD]
+  power:
+    - Damage[+10][self]
+    - Hurt[2][self]
+  particles:
+    enabled: true
+    color: red
+    shape: sphere
+Heal:
+  name: "Heal"
+  manaCost: 30
+  activation:
+    - Chat[System Call Generate Luminous Helement Heal]
+  power:
+    - Heal[4][@a[distance..=10]]
+  particles:
+    enabled: true
+    color: yellow
+    shape: sphere
+TrasferLife:
+  name: "Transfer Health"
+  manaCost: 17
+  activation:
+    - Chat[System Call Transfer Human Durability Self to Left]
+  power:
+    - Heal[4][@p]
+    - Hurt[4][self]
+  particles:
+    enabled: true
+    color: red
+    shape: toTarget

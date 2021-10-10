@@ -6,6 +6,7 @@ import me.mrliam2614.combatskills.items.GenericList;
 import me.mrliam2614.combatskills.skillActivation.ActivationVerify;
 import me.mrliam2614.combatskills.users.ActivateSkill;
 import me.mrliam2614.combatskills.users.GetClass;
+import me.mrliam2614.combatskills.users.Particles;
 import me.mrliam2614.combatskills.users.Verifications;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.ConfigurationSection;
@@ -24,6 +25,7 @@ public class CombatSkills extends JavaPlugin {
     public Verifications verifications;
     public ActivationVerify activationVerify;
     public GenericList genericList;
+    public Particles particles;
 
     public void onEnable() {
         facilitisAPI = FacilitisAPI.getInstance();
@@ -43,6 +45,7 @@ public class CombatSkills extends JavaPlugin {
         verifications = new Verifications(this);
         activationVerify = new ActivationVerify(this);
         genericList = new GenericList(this);
+        particles = new Particles(this);
     }
 
     public void onDisable() {
